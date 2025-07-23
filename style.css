@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+/* Font remains the same */
+@font-face {
+    font-family: 'Norse';
+    src: url(./font/Norse-Bold.otf);
+}
+
+.background-img {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 35vw; /* use viewport width instead of fixed 30% */
+    min-width: 250px; /* prevent it from shrinking too much */
+    height: 100vh;
+}
+
+.leaves {
+    width: 100%; /* let it fill the .background-img */
+    height: 100%;
+    vertical-align: bottom;
+    object-fit: cover; /* ensures image fills without stretching */
+}
+
+.odin {
+    position: absolute;
+    top: 30%; /* more scalable than fixed pixels */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+    height: auto;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.odin-logo {
+    width: 15%;
+    max-width: 100px;
+    height: auto;
+}
+
+.norse-text {
+    color: white;
+    font-size: clamp(2rem, 6vw, 6rem); /* scalable text size */
+    font-family: 'Norse', Courier, monospace;
+    margin-left: 1rem;
+}
+
+.credit {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    bottom: 20px;
+    opacity: 0.5;
+}
+
+#form-side{
+    height: 100vh;
+    width: 65vw;
+    margin: 0;
+    min-width: none;
+    flex: 1;
+}
+
+#disclaimer{
+    background-color: #fafafa;
+    height: 33vh;
+    width: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+.disclaim{
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    margin-left: 7%;
+    margin-right: 25%;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+#form-body{
+    background-color: white;
+    height: 34vh;
+    width: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    align-items: flex-start;
+    
+
+}
+
+#form1{
+    
+    flex: 1;
+    width: auto;
+    height: auto;
+    padding-top: 2%;
+    padding-left: 40px;
+    
+    
+}
+
+#lets{
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px;
+    padding-left: 40px;
+    padding-top: 20px;
+    
+}
+
+.groups{
+    display: flex;
+    flex: auto;
+    width: fit-content;
+    height: auto;
+    flex-direction: row;
+    
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    padding-right: 25%;
+    padding-top: 20px;
+
+}
+
+label{
+    width: 200px;
+    font-size: 4rem;
+    
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.labels{
+    font-size: 12px;
+    color: grey;
+}
+
+input{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+#account-creation{
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    height: 33vh;
+    width: auto;
+    flex: 1;
+}
+
+.create{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: darkolivegreen;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.already{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.have{
+    font-weight: bolder;
+}
+
+.log{
+    margin-left: 10px;
+    color: darkgreen;
+    font-weight: bold;
+}
+
